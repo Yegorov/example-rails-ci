@@ -6,6 +6,7 @@ rails new . -T --skip-action-mailbox --skip-active-storage --skip-spring --skip-
 
 
 ### add rspec
+  * `bundle binstubs rspec-core`
 ### add simplecov
 ### add capybara
 ### add cuprite
@@ -18,3 +19,12 @@ rails new . -T --skip-action-mailbox --skip-active-storage --skip-spring --skip-
 ### add factory_bot
 
 ### add annotate
+
+
+## etc
+```
+annotate --models
+```
+
+## Issues
+* https://stackoverflow.com/questions/38209186/rails-5-rspec-environment-data-not-found-in-the-schema
