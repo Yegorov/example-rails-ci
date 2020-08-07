@@ -20,6 +20,8 @@ rails new . -T --skip-action-mailbox --skip-active-storage --skip-spring --skip-
 
 ### add annotate
 
+### add coverband
+  * https://github.com/danmayer/coverband#advanced-config
 
 ## etc
 ```
