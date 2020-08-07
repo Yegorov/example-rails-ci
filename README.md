@@ -23,8 +23,25 @@ rails new . -T --skip-action-mailbox --skip-active-storage --skip-spring --skip-
 
 ## etc
 ```
+INSPECTOR=true bin/rspec # cuprite
+```
+
+```
 annotate --models
+```
+
+```
+bin/rails g rspec:feature home
 ```
 
 ## Issues
 * https://stackoverflow.com/questions/38209186/rails-5-rspec-environment-data-not-found-in-the-schema
+* https://relishapp.com/rspec/rspec-rails/docs/generators
+
+```
+     Selenium::WebDriver::Error::WebDriverError:
+       Unable to find chromedriver. Please download the server from
+       https://chromedriver.storage.googleapis.com/index.html and place it somewhere on your PATH.
+       More info at https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
+```
+* https://sites.google.com/a/chromium.org/chromedriver/

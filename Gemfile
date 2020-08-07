@@ -38,6 +38,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'database_cleaner-active_record'
   gem "cuprite"
+  gem 'selenium-webdriver'
 end
 
 group :development do
