@@ -1,13 +1,15 @@
-image: docker:19.03.12
+image: docker:latest
 
 # before_script:
 #   - docker info
 
-services:
-  - docker:19.03.12-dind
+# services:
+#   - docker:19.03.12-dind
 
 build:
   stage: build
   script:
+    - ls
+    - echo "start"
     - docker build --force-rm --no-cache -t example-rails-ci -f dockerfiles/ci.Dockerfile .
     - docker run example-rails-ci bundler-audit
