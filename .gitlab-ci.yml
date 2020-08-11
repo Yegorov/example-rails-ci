@@ -1,4 +1,4 @@
-image: arteme/example-rails-ci:latest
+image: registry.rscz.ru:5005/arteme/example-rails-ci
 
 build:
   stage: build
