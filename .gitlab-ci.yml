@@ -21,6 +21,7 @@ build:
     - ruby -v
     - gem env
     - bundle env
-    - bundle install --jobs $(nproc) --path vendor/ruby
+    - bundle config set path 'vendor/ruby'
+    - bundle install --jobs $(nproc)
     - bundler-audit
     - brakeman
