@@ -1,15 +1,10 @@
-image: docker:latest
-
-# before_script:
-#   - docker info
-
-# services:
-#   - docker:19.03.12-dind
+image: arteme/example-rails-ci:latest
 
 build:
   stage: build
   script:
     - ls
-    - echo "start"
-    - docker build --force-rm --no-cache -t example-rails-ci -f dockerfiles/ci.Dockerfile .
-    - docker run example-rails-ci bundler-audit
+    - echo "bundler-audit"
+    - bundler-audit
+    - echo "brakeman"
+    - brakeman
