@@ -47,3 +47,13 @@ bin/rails g rspec:feature home
        More info at https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
 ```
 * https://sites.google.com/a/chromium.org/chromedriver/
+
+
+## Docker
+```
+mkdir dockerfiles
+touch dockerfiles/ci.Dockerfile
+
+docker build --force-rm --no-cache -t example-rails-ci -f dockerfiles/ci.Dockerfile .
+docker run --rm -it -v $(pwd):/app example-rails-ci /bin/bash
+```
