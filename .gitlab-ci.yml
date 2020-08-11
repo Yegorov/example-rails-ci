@@ -1,11 +1,26 @@
 image: registry.rscz.ru:5005/arteme/example-rails-ci
 
+variables:
+  TIMEZONE: "Europe/Moscow"
+
+cache:
+  #untracked: true
+  key: "$CI_PROJECT_ID"
+  paths:
+    - node_modules/
+    - vendor/ruby/
+    - .bundled/
+    - .yarn
+
+
 build:
   stage: build
   script:
     - ls
     - printenv
-    - echo "bundler-audit"
+    - ruby -v
+    - gem env
+    - bundle env
+    - bundle install --jobs $(nproc) --path vendor/ruby
     - bundler-audit
-    - echo "brakeman"
     - brakeman
