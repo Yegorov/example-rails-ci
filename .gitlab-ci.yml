@@ -1,7 +1,7 @@
 image: docker:19.03.12
 
-before_script:
-  - docker info
+# before_script:
+#   - docker info
 
 services:
   - docker:19.03.12-dind
