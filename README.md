@@ -57,3 +57,5 @@ touch dockerfiles/ci.Dockerfile
 docker build --force-rm --no-cache -t example-rails-ci -f dockerfiles/ci.Dockerfile .
 docker run --rm -it -v $(pwd):/app example-rails-ci /bin/bash
 ```
+
+test
